@@ -8,6 +8,7 @@ const deleteFiles = require('./utils/script');
 require('dotenv').config();
 
 const app = express();
+app.enable('trust proxy');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
